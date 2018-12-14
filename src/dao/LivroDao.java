@@ -16,4 +16,9 @@ ArrayList<Livro> livros = new ArrayList<>();
 		}
 	}
 	
+	public void listar () {
+		for (int i = 0; i < livros.size(); i++) {
+			livros.get(i).toString();
+		}
+	}
 }
