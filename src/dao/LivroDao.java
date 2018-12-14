@@ -21,4 +21,12 @@ ArrayList<Livro> livros = new ArrayList<>();
 			livros.get(i).toString();
 		}
 	}
+	
+	public void remover (String titulo) {
+		for (int i = 0; i < livros.size(); i++) {
+			if (livros.get(i).getTitulo().equals(titulo)) {
+				livros.remove(i);
+			}
+		}
+	}
 }
