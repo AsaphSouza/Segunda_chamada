@@ -6,7 +6,7 @@ import entidades.Livro;
 
 public class LivroDao {
 
-ArrayList<Livro> livros = new ArrayList<>();
+private ArrayList<Livro> livros = new ArrayList<>();
 	
 	public  void cadastrar (Livro livro) {
 		for (int i = 0; i < livros.size(); i++) {
@@ -22,11 +22,22 @@ ArrayList<Livro> livros = new ArrayList<>();
 		}
 	}
 	
-	public void remover (String titulo) {
+	public boolean remover (String titulo) {
 		for (int i = 0; i < livros.size(); i++) {
 			if (livros.get(i).getTitulo().equals(titulo)) {
 				livros.remove(i);
+				return true;
 			}
-		}
+		} 
+		return false;
+	}
+
+
+	public ArrayList<Livro> getLivros() {
+		return livros;
+	}
+
+	public void setLivros(ArrayList<Livro> livros) {
+		this.livros = livros;
 	}
 }
